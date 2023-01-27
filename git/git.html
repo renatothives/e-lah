@@ -1,0 +1,135 @@
+<!DOCTYPE html> <!-- VSCode: ctrl + shif + p -->
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Fundamentar</title>
+  </head>
+  <body>
+    <h1>GIT - Controle de versão distribuído</h1>
+    <h2>Áreas do GIT</h2>
+    <spam>https://www.youtube.com/watch?v=WVLhm1AMeYE&list=PLInBAd9OZCzzHBJjLFZzRl6DgUmOeG3H0</spam>
+    <ul>
+      <li>Working directory</li>
+      <li>Staging area</li>
+      <li>Git directory</li>
+    </ul>
+    <h2>Configurações básicas</h2>
+    <div>
+      <pre><code>git config --global user.name "nome"</code></pre>
+      <pre><code>git config --global user.email "e-mail"</code></pre>
+      <spam>Git bash >> ícone >> botão direito >> propriedades >> inicar em</spam>
+    </div>
+    <h2>Comandos básicos</h2>
+    <div>
+      <spam>Criar repositório</spam>
+      <pre><code>git init</code></pre>
+
+      <spam>Situação atual</spam>
+      <pre><code>git status</code></pre>
+      
+      <spam>Adicionar arquivos</spam>
+      <pre><code>git add {nome-do-arquivo.extensao}</code></pre>
+      <pre><code>git add {*.txt}</code></pre>
+      <pre><code>git add .</code></pre>
+
+      <spam>Confirmar as mudanças</spam>
+      <pre><code>git commit -m "{mensagem}"</code></pre>
+
+      <spam>Confirmar as mudanças pulando o gitadd</spam>
+      <pre><code>git commit -a -m "{mensagem}"</code></pre>
+
+      <spam>Como ignorar um arquivo</spam>
+      <spam>Criar arquivo ".gitignore"</spam>
+      <spam>incluir os nomes dos arquivos ou pastas por linha, exemplo:</spam>
+      <pre><code>.gitignore<br>temp/</code></pre>
+    </div>
+
+    <h2>Verificar alterações</h2>
+    <div>
+      <spam>Consultar alterações que não estão na stage area</spam>
+      <pre><code>git diff</code></pre>
+
+      <spam>Consultar o que está na stage area</spam>
+      <pre><code>git diff --staged</code></pre>
+
+      <spam>Consultar todos os commits</spam>
+      <pre><code>git log</code></pre>
+      <pre><code>git log -p</code></pre>
+      <pre><code>git log --pretty=oneline</code></pre>
+
+      <spam>Limitar log's exibidos</spam>
+      <pre><code>git log -p -{n}</code></pre>
+      <pre><code>git log -p -1</code></pre>
+
+      <spam>Melhor opção é a interface gráfica</spam>
+      <pre><code>git k</code></pre>
+    </div>
+
+    <h2>Desfazer commit</h2>
+    <div>
+      <spam>Editar commit mais recente</spam>
+      <pre><code>git commit --amend -m "{mensagem}"</code></pre>
+
+      <spam>Remover da stage area</spam>
+      <pre><code>git reset HEAD {nome-do-arquivo.extensao}</code></pre>
+
+      <spam>Reverter alteração</spam>
+      <pre><code>git checkout -- {nome-do-arquivo-.extensao}</code></pre>
+
+      <spam>Deletar um arquivo</spam>
+      <pre><code>git rm {nome-do-arquivo-.extensao}</code></pre>
+    </div>
+
+    <h2>Tag é uma etiqueta ou melhor um ponto de atalho (ponteiro)</h2>
+    <div>
+      <spam>Listar as tag's</spam>
+      <pre><code>git tag</code></pre>
+
+      <spam>Criar uma tag anotada (-a)</spam>
+      <pre><code>git tag -a {nome-tag} -m {mensagem}</code></pre>
+
+      <spam>Criar uma tag num determinado commit</spam>
+      <pre><code>git tag -a {nome-tag} {chave-completa} -m {mensagem}</code></pre>
+
+      <spam>Detalhes de uma determianda tag</spam>
+      <pre><code>git show {nome-tag}</code></pre>
+
+      <spam>Usar arquivos como eram na criação da tag</spam>
+      <pre><code>git checkout {nome-tag}</code></pre>
+
+      <spam>Voltar para versão atual dos arquivos</spam>
+      <pre><code>git checkout master</code></pre>
+
+      <spam>Deletar uma tag</spam>
+      <pre><code>git -d {nome-tag}</code></pre>
+    </div>
+
+    <h2>Branch's são ramificações</h2>
+    <div>
+      <spam>Criar um branch</spam>
+      <pre><code>git branch {nome-branch}</code></pre>
+
+      <spam>Transitar para um branch</spam>
+      <pre><code>git checkout {nome-branch}</code></pre>
+
+      <spam>Criar um branch e já transitar os arquivos para ele</spam>
+      <pre><code>git checkout -b {nome-branch}</code></pre>
+
+      <spam>Unificar alterações de um branch para o atual</spam>
+      <pre><code>git merge {nome-branch-origem}</code></pre>
+
+      <spam>Deletar um branch</spam>
+      <pre><code>git branch -d {nome-branch}</code></pre>
+
+      <spam>Listar todos os branch's</spam>
+      <pre><code>git branch</code></pre>
+    </div>
+
+    <h2>Trabalhar com ambiente colaborativo</h2>
+    <div>
+      <spam>Copiar um repositório para a pasta local</spam>
+      <pre><code>git clone {caminho} {nome-pasta-personalizada}</code></pre>
+    </div>
+  </body>
+</html>
